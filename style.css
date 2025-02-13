@@ -1,0 +1,135 @@
+@import url(https://fonts.google.com/specimen/Figtree);
+
+:root {
+    /* Colors */
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    /* Typography */
+    --fs-body: 16px;
+    --ff: 'Figtree', sans-serif;
+    --fw-light: 500;
+    --fw-heavy: 800;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    font-family: var(--ff);
+}
+
+.card {
+    max-width: 384px;
+    max-height: 522px;
+    background-color: var(--white);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--gray-950);
+    box-shadow: 10px 10px 0px var(--gray-950);
+}
+
+.blog-image {
+    width: 336px;
+    height: 200px;
+    padding-top: 24px;
+}
+
+.blog-image img {
+    border-radius: 10px;
+}
+
+.content {
+    padding: 24px;
+}
+
+.category {
+    height: 29px;
+    width: 82px;
+    background-color: var(--yellow);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-950);
+    display: grid;
+    place-items: center;
+    margin-top: auto;    
+}
+
+.date {
+    font-size: 13px;
+    color: var(--gray-950);
+    font-weight: 400;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: var(--fw-heavy);
+    line-height: 36px;
+    color: var(--gray-950);
+}
+
+.title:hover{
+    cursor: pointer;
+    color: var(--yellow);
+} 
+
+.description {
+    color: var(--gray-500);
+    font-size: var(--fs-body);
+}
+
+.author {
+    height: 32px;
+    width: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author img {
+    height: 32px;
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+.author p {
+    font-size: 15px;
+    color: var(--gray-950);
+    font-weight: 700;
+}
+
+
+@media (max-width: 375px) {
+    .card {
+        max-width: 327px;
+    }
+
+    .blog-image {
+        max-width: 279px;
+        max-height: 200px;
+    }
+    
+    .blog-image img {
+        width: 279px; 
+    }
+
+    .content {
+        max-width: 279px;
+    }
+
+    .category {
+        margin-top: auto;
+    }
+
+}
